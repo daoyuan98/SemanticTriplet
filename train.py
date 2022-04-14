@@ -376,12 +376,6 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     args.class_num = 100 if args.dataset == "cifar100" else 10
-    if args.best:
-        j = json.load(open("best_hyperparam.json", "r"))
-        args.sem_weight = float(j[args.net][args.dataset][args.similarity_source]['weight'])
-        args.sem_threshold = float(j[args.net][args.dataset][args.similarity_source]['threshold'])
-        args.decay_coeff = float(j[args.net][args.dataset][args.similarity_source]['decay'])
-
 
     initialize_with_seed(args.seed)
 
