@@ -8,6 +8,3 @@ python train_weighter3hc.py \
         -exp_name "r18_glove_cifar100"   \
         -dataset "cifar100" \
         -seed 0
-
-
-
